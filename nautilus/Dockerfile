@@ -14,6 +14,6 @@ EXPOSE 8080
 
 WORKDIR /applications/tomcat/bin/
 
-ENV JAVA_OPTS=-Dspring.profiles.active=dev
+ENV JAVA_OPTS=-Dspring.profiles.active=prod
 
-CMD ["catalina.sh", "run"]
+CMD sh catalina.sh run
