@@ -9,7 +9,6 @@ RUN curl --user admin:admin00 "http://1.223.129.52:8081/nexus/service/local/arti
 
 RUN mv nautilus.war /applications/tomcat/webapps
 
-
 EXPOSE 8080
 
 WORKDIR /applications/tomcat/bin/
