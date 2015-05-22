@@ -18,5 +18,9 @@ RUN yum remove -y wget unzip
 
 EXPOSE 9000
 
+VOLUME /applications/sonarqube-$SONAR_VERSION/extensions
+VOLUME /applications/sonarqube-$SONAR_VERSION/logs
+VOLUME /applications/sonarqube-$SONAR_VERSION/conf
+
 WORKDIR /applications/sonarqube-$SONAR_VERSION/bin/linux-x86-64/
-CMD ./sonar.sh start
+CMD ./sonar.sh console
