@@ -3,7 +3,7 @@ FROM leehanwool/cent7-jdk7-tomcat7
 MAINTAINER Nathan Lee <hwlee@itwise.co.kr>
 
 # docker JAVA profile
-ENV JAVA_OPTS=-Dspring.profiles.active=docker
+ENV JAVA_OPTS=-"-Dspring.profiles.active=dev -Djava.awt.headless=true -server -Xms512m -Xmx1024m -XX:NewSize=256m -XX:MaxNewSize=256m -XX:PermSize=256m -XX:MaxPermSize=256m -XX:+DisableExplicitGC"
 
 WORKDIR /applications/
 
