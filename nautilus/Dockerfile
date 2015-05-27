@@ -2,6 +2,9 @@ FROM leehanwool/cent7-jdk7-tomcat7
 
 MAINTAINER Nathan Lee <hwlee@itwise.co.kr>
 
+# docker JAVA profile
+ENV JAVA_OPTS=-Dspring.profiles.active=docker
+
 WORKDIR /applications/
 
 # Download war image from Nexus
@@ -12,7 +15,5 @@ RUN mv nautilus.war /applications/tomcat/webapps
 EXPOSE 8080
 
 WORKDIR /applications/tomcat/bin/
-
-ENV JAVA_OPTS=-Dspring.profiles.active=docker
 
 CMD sh catalina.sh run
