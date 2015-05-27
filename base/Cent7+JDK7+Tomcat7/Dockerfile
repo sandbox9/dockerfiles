@@ -6,7 +6,7 @@ ENV CATALINA_HOME /applications/tomcat
 ENV PATH $CATALINA_HOME/bin:$PATH
 ENV TOMCAT_MAJOR_VERSION 7
 ENV TOMCAT_VERSION 7.0.62
-ENV TOMCAT_TGZ_URL http://apache.tt.co.kr/tomcat/tomcat-$TOMCAT_MAJOR_VERSION/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz
+ENV TOMCAT_TGZ_URL http://mirror.apache-kr.org/tomcat/tomcat-$TOMCAT_MAJOR_VERSION/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz
 
 RUN yum install -y net-tools wget tar
 
