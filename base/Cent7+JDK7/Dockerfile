@@ -9,3 +9,6 @@ RUN yum -y install wget && \
     rpm -Uvh jdk-7u80-linux-x64.rpm && \
     yum -y remove wget && \
     rm -f jdk-7u80-linux-x64.rpm MD5SUM
+	
+ENV JAVA_HOME=/usr/java/jdk1.7.0_80/
+ENV PATH=$PATH:$JAVA_HOME
